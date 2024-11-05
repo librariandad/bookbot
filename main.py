@@ -1,7 +1,9 @@
 def main():
     with open("books/frankenstein.txt") as f:
         file_contents = f.read()
-    print(count_chars(file_contents))
+    chars = count_chars(file_contents)
+    for c in chars:
+        print(f"The '{c}' character was found {chars[c]} times")
 
 def count_words(text):
     words = text.split()
